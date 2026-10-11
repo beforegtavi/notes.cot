@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Notes Portal</title>
+    
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Bulletproof Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Navigation -->
+    <nav class="navbar glass-effect">
+        <div class="nav-container">
+            <a href="/" class="nav-brand">
+                <span class="code-icon">&lt;/&gt;</span>
+                <span class="brand-text">Nitil Verma</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="#" class="auth-trigger">PYQs</a></li>
+                <li><a href="#" class="auth-trigger">Books</a></li>
+                <li><a href="#" class="auth-trigger">Notes</a></li>
+                <li><a href="#" class="auth-trigger">Midsem</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="btn btn-primary auth-trigger">
+                    <i class="fa-solid fa-user-shield"></i> Login
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="page-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="badge">Platform v2.0</div>
+            <h1 class="gradient-text">Welcome to the College Notes Portal</h1>
+            <p class="hero-description">
+                This is an independent platform built to provide essential study materials, PDFs, PYQs, and Mid-Term Examination samples for the College of Technology. The content curated here is based on previous semesters and lectures to ensure you have the precise resources required.
+            </p>
+        </section>
+
+        <!-- Access Guidelines Section -->
+        <section class="guidelines">
+            <div class="section-header">
+                <h2>Authentication Protocols</h2>
+                <p>Strict ID formatting is enforced for platform access. Follow your branch format precisely.</p>
+            </div>
+
+            <div class="card-grid">
+                <!-- CSE Card -->
+                <div class="info-card glass-panel">
+                    <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3>Computer Science</h3>
+                    <div class="card-body">
+                        <p><strong>Id Format:</strong> CSE-26</p>
+                        <div class="example-box">
+                            <span>Standardized access for all students. </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DS & AI Card -->
+                <div class="info-card glass-panel">
+                    <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <h3>DS & AI</h3>
+                    <div class="card-body">
+                        <p><strong>Id Format:</strong> AIDS-26</p>
+                        <div class="example-box">Standardized access for all students.</div>
+                    </div>
+                </div>
+
+                <!-- IT Card -->
+                <div class="info-card glass-panel">
+                    <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3>Information Tech</h3>
+                    <div class="card-body">
+                        <p><strong>Id Format:</strong> IT-26</p>
+                        <div class="example-box">Standardized access for all students.</div>
+                    </div>
+                </div>
+
+                <!-- ECE & Chem Card -->
+                <div class="info-card glass-panel">
+                    <div class="card-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+                    <h3>Electronics & Communication</h3>
+                    <div class="card-body">
+                        <p><strong>Id Format:</strong> ECE-26</p>
+                        <div class="example-box">Standardized access for all students.</div>
+                    </div>
+                </div>
+
+                <div class="info-card glass-panel">
+                    <div class="card-icon"><i class="fa-solid fa-gears"></i></div>
+                    <h3>Machanical Engg.</h3>
+                    <div class="card-body">
+                        <p><strong>Id Format:</strong> ME-26</p>
+                        <div class="example-box">Standardized access for all students.</div>
+                    </div>
+                </div>
+
+                <div class="info-card glass-panel">
+                    <div class="card-icon"><i class="fa-solid fa-flask"></i></div>
+                    <h3>Chemical Engg.</h3>
+                    <div class="card-body">
+                        <p><strong>Id Format:</strong> CHE-26</p>
+                        <div class="example-box">Standardized access for all students.</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Secure Login Modal -->
+    <div class="modal-overlay hidden" id="loginModal">
+        <div class="modal-container glass-panel">
+            <div class="modal-header">
+                <h2>Secure Login</h2>
+                <button class="btn-close" id="closeLoginBtn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form id="authForm" class="modern-form">
+                <div class="input-group">
+                    <label for="username">Full Name</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="username" name="username" placeholder="Enter your registered name" required>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="idnumber">ID Number</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-id-card"></i>
+                        <input type="password" id="idnumber" name="idnumber" placeholder="Enter strictly formatted ID" required>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-full">Authenticate <i class="fa-solid fa-arrow-right-to-bracket"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Student Dashboard (Hidden by default) -->
+    <div id="dashboard-section" class="dashboard-wrapper hidden">
+        <div class="dashboard-container glass-panel">
+            <div class="dashboard-header">
+                <h2>Welcome, <span id="user-display" class="highlight">Student</span></h2>
+                <button id="logoutBtn" class="btn btn-danger"><i class="fa-solid fa-power-off"></i> Logout</button>
+            </div>
+            
+            <div class="filters-grid">
+                <div class="select-wrapper">
+                    <select id="programme">
+                        <option value="" disabled selected>Select Programme</option>
+                        <option value="CSE">Computer Science</option>
+                        <option value="ME">Mechanical Engineering</option>
+                        <option value="IT">Information Technology</option>
+                        <option value="AI DS">AI & DS</option>
+                        <option value="ECE">Electronics & Comm.</option>
+                        <option value="CE">Chemical Engineering</option>
+                    </select>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+                <div class="select-wrapper">
+                    <select id="year" disabled>
+                        <option value="" disabled selected>Select Year</option>
+                    </select>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+                <div class="select-wrapper">
+                    <select id="semester" disabled>
+                        <option value="" disabled selected>Select Semester</option>
+                    </select>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+                <div class="select-wrapper">
+                    <select id="course" disabled>
+                        <option value="" disabled selected>Select Course Code</option>
+                    </select>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+
+            <div id="material-actions" class="material-actions hidden">
+                <h3><i class="fa-solid fa-folder-open"></i> Available Resources</h3>
+                <div class="action-buttons">
+                    <button class="btn btn-action" data-type="notes"><i class="fa-solid fa-file-lines"></i> Notes</button>
+                    <button class="btn btn-action" data-type="books"><i class="fa-solid fa-book"></i> Books</button>
+                    <button class="btn btn-action" data-type="midsem"><i class="fa-solid fa-file-pen"></i> Mid-Sem SPs</button>
+                    <button class="btn btn-action" data-type="pyqs"><i class="fa-solid fa-clock-rotate-left"></i> PYQs</button>
+                </div>
+            </div>
+
+            <div id="content-viewer" class="viewer-area hidden">
+                <div class="loader"></div>
+                <p id="viewer-status">Accessing secure files...</p>
+                <div id="dynamic-links-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="nav-brand">
+                        <span class="code-icon">&lt;/&gt;</span>
+                        <span class="brand-text">Nitil Verma</span>
+                    </div>
+                    <p class="footer-bio">Engineering the future of seamless academic resource distribution.</p>
+                    <P class="footer-bio">THANKS FOR VISITING!!</P>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/"><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li><a href="https://www.svpuat.edu.in/" target="_blank"><i class="fa-solid fa-building-columns"></i> University</a></li>
+                        <li><a href="https://www.svpuat.edu.in/college-of-technology.php?id=3" target="_blank"><i class="fa-solid fa-graduation-cap"></i> College Page</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal & Support</h4>
+                    <ul>
+                        <li><a href="mailto:nitilvermagaili@gmail.com"><i class="fa-solid fa-envelope"></i> Contact Support</a></li>
+                        <li><a href="terms-of-services.txt"><i class="fa-solid fa-file-contract"></i> Terms of Service</a></li>
+                        <li><a href="privacy-policy.txt"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/cdnitilverma/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/beforegtavi" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/nitilrverma/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Designed & Developed by Nitil Verma. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+    
+</body>
+</html>
