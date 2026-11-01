@@ -1,9 +1,5 @@
-/* ==========================================================================
-   CSS Architecture | Coded to Bulletproof Standards
-   ========================================================================== */
-
 :root {
-    /* Core Palette */
+
     --bg-deep: #05050A;
     --bg-surface: #0A0A14;
     --primary-glow: #3B82F6;
@@ -11,16 +7,13 @@
     --accent-cyan: #06B6D4;
     --danger: #EF4444;
     
-    /* Text */
     --text-main: #F8FAFC;
     --text-muted: #94A3B8;
     
-    /* Glassmorphism */
     --glass-bg: rgba(255, 255, 255, 0.03);
     --glass-border: rgba(255, 255, 255, 0.08);
     --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     
-    /* Animation */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -38,7 +31,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* Professional ambient background instead of a harsh local image */
+   
     background-image: 
         radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.08), transparent 25%),
         radial-gradient(circle at 85% 30%, rgba(6, 182, 212, 0.08), transparent 25%);
@@ -49,7 +42,7 @@ body {
     display: none !important;
 }
 
-/* --- Glassmorphism Utilities --- */
+
 .glass-panel {
     background: var(--glass-bg);
     backdrop-filter: blur(16px);
@@ -59,7 +52,6 @@ body {
     box-shadow: var(--glass-shadow);
 }
 
-/* --- Navigation --- */
 .navbar {
     position: sticky;
     top: 0;
@@ -127,7 +119,6 @@ body {
     width: 100%;
 }
 
-/* --- Buttons --- */
 .btn {
     padding: 0.6rem 0.8rem;
     border-radius: 8px;
@@ -170,7 +161,6 @@ body {
     margin-top: 1rem;
 }
 
-/* --- Page Content --- */
 .page-content {
     flex: 1;
     max-width: 1200px;
@@ -179,7 +169,6 @@ body {
     width: 100%;
 }
 
-/* --- Hero Section --- */
 .hero {
     text-align: center;
     max-width: 800px;
@@ -223,7 +212,6 @@ body {
     margin: 0 auto;
 }
 
-/* --- Guidelines Grid --- */
 .section-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -285,7 +273,6 @@ body {
     gap: 0.5rem;
 }
 
-/* --- Modal Architecture --- */
 .modal-overlay {
     position: fixed;
     inset: 0;
@@ -327,7 +314,6 @@ body {
     color: var(--danger);
 }
 
-/* --- Form Elements --- */
 .input-group {
     margin-bottom: 1.5rem;
 }
@@ -369,7 +355,6 @@ body {
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
-/* --- Dashboard --- */
 .dashboard-wrapper {
     position: fixed;
     inset: 0;
@@ -463,7 +448,6 @@ body {
     color: var(--primary-glow);
 }
 
-/* --- Professional Footer --- */
 .site-footer {
     background: #020205;
     border-top: 1px solid var(--glass-border);
@@ -551,7 +535,6 @@ body {
     font-size: 0.875rem;
 }
 
-/* --- Animations --- */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -562,7 +545,6 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- Responsive Media Queries --- */
 @media (max-width: 992px) {
     .footer-grid {
         grid-template-columns: 1fr 1fr;
@@ -574,4 +556,21 @@ body {
     .hero h1 { font-size: 2.5rem; }
     .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
     .dashboard-wrapper { padding: 4rem 1rem 1rem; }
+}
+
+body {
+  margin: 0;
+  background-color: #050505;
+  overflow-x: hidden;
+}
+
+#binary-combat {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  display: block;
 }
